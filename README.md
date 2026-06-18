@@ -20,12 +20,6 @@ The app should publish at:
 https://mypioneeringlife.github.io/Instacart-work-tracker/
 ```
 
-If that exact lowercase link does not work, try this version matching the repository capitalization:
-
-```text
-https://mypioneeringlife.github.io/Instacart-work-tracker/
-```
-
 ## Google Cloud origin
 
 In Google Cloud, add this as the Authorized JavaScript origin:
