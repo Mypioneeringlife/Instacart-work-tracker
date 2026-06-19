@@ -1,10 +1,70 @@
-# Instacart Work Tracker 4.2
+# Instacart Work Tracker 4.3
 
-A simple mobile-first tracker for Instacart work days, mileage, receipts, screenshots, year-end export, and Google Drive backup.
+A simple mobile-first tracker for Instacart work days, mileage, receipts, screenshots, CSV exports, and reliable share-based backup.
 
-## GitHub Pages
+## Live app
 
-After files are committed, turn on GitHub Pages:
+The app should publish at:
+
+```text
+https://mypioneeringlife.github.io/Instacart-work-tracker/
+```
+
+## Backup system
+
+Version 4.3 removes the Google Cloud / Google Drive API requirement.
+
+Instead, open the app and go to:
+
+```text
+Backup → Share Backup
+```
+
+Then choose Google Drive, Files, OneDrive, Dropbox, email, or any other destination from your phone or computer share menu.
+
+This creates a full JSON backup file that includes:
+
+- saved work days
+- mileage
+- earnings
+- tips
+- receipt photo data
+- screenshot proof data
+- settings
+
+## Restore
+
+To restore a previous backup:
+
+```text
+Backup → Restore Backup
+```
+
+Select the JSON backup file you saved earlier.
+
+## Year-end export
+
+The Backup tab also includes:
+
+- Download Work CSV
+- Download Expenses CSV
+- Download Year Package
+
+The CSV exports are intended for year-end review, tax prep, and recordkeeping.
+
+## Colors
+
+The app uses an Instacart-inspired palette:
+
+```text
+Green: #43B02A
+Carrot orange: #FF8200
+Dark background: #112019
+```
+
+## GitHub Pages setup
+
+If Pages is not already active:
 
 1. Open this repository on GitHub.
 2. Go to **Settings**.
@@ -13,50 +73,3 @@ After files are committed, turn on GitHub Pages:
 5. Branch: **main**.
 6. Folder: **/root**.
 7. Save.
-
-The app should publish at:
-
-```text
-https://mypioneeringlife.github.io/Instacart-work-tracker/
-```
-
-## Google Cloud origin
-
-In Google Cloud, add this as the Authorized JavaScript origin:
-
-```text
-https://mypioneeringlife.github.io
-```
-
-Do not include the `/Instacart-work-tracker/` path in the authorized origin.
-
-## Google Drive backup
-
-Inside the app:
-
-1. Go to **Export**.
-2. Paste your OAuth Client ID.
-3. Tap **Save Client ID**.
-4. Tap **Connect Google Drive**.
-5. Approve access.
-6. Tap **Backup Now to Drive**.
-
-The app creates/uses a Google Drive folder named:
-
-```text
-Instacart Work Tracker Backups
-```
-
-It updates:
-
-```text
-latest-backup.json
-```
-
-It also creates dated snapshots like:
-
-```text
-backup-2026-06-17.json
-```
-
-The app does not delete old backups automatically.
