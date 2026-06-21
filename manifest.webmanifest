@@ -1,0 +1,19 @@
+{
+  "name": "Instacart Work Tracker",
+  "short_name": "IC Tracker",
+  "description": "Simple shift log, receipts, exports, and backup for Instacart work.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#43B02A",
+  "icons": [
+    {
+      "src": "app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
